@@ -1,0 +1,11 @@
+<template>
+	  	<require from="./date-format"></require>
+  		<require from="./currency-format"></require>
+		  <ul>
+			  <li repeat.for="u of users">
+				  ${u}
+			  </li>
+			  	</ul>
+	  ${currentDate | dateFormat:'MMMM Mo YYYY'} <br/>
+	  ${currentNumber}
+</template>
