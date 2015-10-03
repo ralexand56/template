@@ -1,7 +1,7 @@
 
 
 export class user {
-    users: Array<string> = ["Johnnie", "Tony", "Julie"];
+    users: Array<string> = ["Johnnie", "Tony", "Julie", "Lilli"];
     currentDate: Date = new Date();
     currentUser: string = "Paris Hilton";
     currentNumber:number = 1034200.01;
