@@ -23,10 +23,10 @@ export class httpsample{
 		// return this.http.jsonp(this.subreddit_url, "jsonp").then(r => {
 		// 	this.posts = r.response.data.children;
 		// });
-		//this.http.fetch(this.subreddit_url).then(x => this.posts = x.response.data.children);
-		//  return this.http.fetch('posts')
-		// .then(response => response.json())
-      // .then(users => this.posts = posts);
+		this.http.fetch(this.subreddit_url).then(x => this.posts = x.Response.data.children);
+		  return this.http.fetch('posts')
+		 .then(response => response.json())
+         .then(users => this.posts = posts);
 	}
 
 	// jsonp(subreddit_url, callbackParameterName='jsoncallback'){

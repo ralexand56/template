@@ -26,13 +26,14 @@ define(["require", "exports", 'aurelia-framework', 'aurelia-fetch-client', 'fetc
             this.http = http;
         };
         httpsample.prototype.loadPosts = function () {
+            var _this = this;
             // return this.http.jsonp(this.subreddit_url, "jsonp").then(r => {
             // 	this.posts = r.response.data.children;
             // });
-            //this.http.fetch(this.subreddit_url).then(x => this.posts = x.response.data.children);
-            //  return this.http.fetch('posts')
-            // .then(response => response.json())
-            // .then(users => this.posts = posts);
+            this.http.fetch(this.subreddit_url).then(function (x) { return _this.posts = x.Response.data.children; });
+            return this.http.fetch('posts')
+                .then(function (response) { return response.json(); })
+                .then(function (users) { return _this.posts = posts; });
         };
         // jsonp(subreddit_url, callbackParameterName='jsoncallback'){
         // 	return this.createRequest(subreddit_url).asJsonp(callbackParameterName).send().then(x => this.posts = ;
