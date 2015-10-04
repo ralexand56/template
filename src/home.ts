@@ -3,5 +3,6 @@ export class home {
 
 	constructor(){
 		this.name = "Template 1";
+		console.log("Hello!");
 	}
 }

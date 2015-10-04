@@ -1,32 +1,35 @@
 import {inject} from 'aurelia-framework';
-import {HttpClient} from 'aurelia-fetch-client';
+import {HttpClient} from 'aurelia-http-client';
 import 'fetch';
 
 @inject(HttpClient)
 export class httpsample{
-	posts= [];
-	subreddit_url:string = "http://reddit.com/r/funny.json";
-	http:HttpClient;
+	posts = [];
+	users = [];
+	subreddit_url:string = "https://api.github.com/";
+	github_url:string = "http://reddit.com/r/nsfw.json";
 
-	contructor(http){
-		console.log("in constructor");
-		http.configure(config=> {
-			config
-				.useStandardConfiguration()
-				.withBaseUrl(this.subreddit_url);
-		});
+	constructor(public http:HttpClient){
+		
+		// http.configure(config=> {
+		// 	config
+		// 		.useStandardConfiguration()
+		// 		.withBaseUrl(this.subreddit_url);
+		// });
 
 		this.http = http;
 	}
 
+	loadUsers() {
+		// this.http.fetch("users")
+		// 	.then(response => response.json())
+		// 	.then(users => this.posts = users);
+	}
+	
 	loadPosts() {
-		// return this.http.jsonp(this.subreddit_url, "jsonp").then(r => {
-		// 	this.posts = r.response.data.children;
-		// });
-		this.http.fetch(this.subreddit_url).then(x => this.posts = x.Response.data.children);
-		  return this.http.fetch('posts')
-		 .then(response => response.json())
-         .then(users => this.posts = posts);
+		return this.http.jsonp(this.github_url, "jsonp").then(r => {
+			this.posts = r.response.data.children;
+		});
 	}
 
 	// jsonp(subreddit_url, callbackParameterName='jsoncallback'){
@@ -34,6 +37,6 @@ export class httpsample{
   // }
 	//
 	activate() {
-		return this.loadPosts();
+		this.loadPosts();
 	}
 }
