@@ -1,6 +1,7 @@
 import {autoinject} from 'aurelia-framework';
 import {Router} from 'aurelia-router';
-import {HttpClient} from 'aurelia-fetch-client';
+import {CssAnimator} from 'aurelia-animator-css';  
+
 
 export class App {
 	router:Router;
@@ -10,7 +11,8 @@ export class App {
     config.map([
             { route: ['', 'home'], name: 'home', moduleId: './home', nav: true, title: 'Home' },
             { route: 'httpsample', name: 'httpsample', moduleId: './httpsample', nav: true, title: 'Http Sample' },
-            { route: 'user', name: 'user', moduleId: './user', nav: true, title: 'User' }
+            { route: 'user', name: 'user', moduleId: './user', nav: true, title: 'User' },
+            { route: 'anim', name: 'anim', moduleId: './anim', nav: true, title: 'Animation' }
 
     ]);
 

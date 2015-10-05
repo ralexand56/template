@@ -1,8 +1,8 @@
 <template>
-	<div class="row">
+	<div class="row au-animate">
 		<div class="col-md-4" repeat.for="p of posts">
 			<a href="http://reddit.com${p.data.permalink}">
-			<img src.bind="p.data.thumbnail" 
+			<img class="flickr-img" src.bind="p.data.thumbnail" 
 				class="img-rounded img-responsive" 
 				width="300" 
 				height="300" />

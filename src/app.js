@@ -7,7 +7,8 @@ define(["require", "exports"], function (require, exports) {
             config.map([
                 { route: ['', 'home'], name: 'home', moduleId: './home', nav: true, title: 'Home' },
                 { route: 'httpsample', name: 'httpsample', moduleId: './httpsample', nav: true, title: 'Http Sample' },
-                { route: 'user', name: 'user', moduleId: './user', nav: true, title: 'User' }
+                { route: 'user', name: 'user', moduleId: './user', nav: true, title: 'User' },
+                { route: 'anim', name: 'anim', moduleId: './anim', nav: true, title: 'Animation' }
             ]);
             this.router = router;
         };
