@@ -1,9 +1,12 @@
+
 <template>
-	<section>
+	<section class="au-animate">
+		<button click.delegate="addAnimator()">Add</button>
 		<ul class="aurelia-animators">
 			<li class="au-animate" repeat.for="p of plays">
 				<i class="fa fa-hand-peace-o fa-3x" click.delegate="$parent.removeAnimator(p)"> </i> ${p}
 			</li>
 		</ul>
+		<div class="aniTest"></div>
 	</section>
 </template>

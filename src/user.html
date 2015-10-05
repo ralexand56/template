@@ -1,4 +1,5 @@
 <template>
+	<section class="au-animate">
 	  	<require from="./date-format"></require>
   		<require from="./currency-format"></require>
 		  <ul>
@@ -8,4 +9,5 @@
 			  	</ul>
 	  ${currentDate | dateFormat:'MMMM Mo YYYY'} <br/>
 	  ${currentNumber | numberFormat:'$0,000.00'}
+	</section>
 </template>
