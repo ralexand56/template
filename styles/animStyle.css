@@ -167,9 +167,11 @@ body {
     height: 100px;
     background-color: red;
     -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+    /*-webkit-animation-duration: 4s; Chrome, Safari, Opera */
     animation-name: example;
-    animation-duration: 4s;
+    /*animation-duration: 2s;*/
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 /* Chrome, Safari, Opera */
@@ -249,4 +251,16 @@ section.au-leave-active {
     -ms-transform: none;
     transform: none
   }
+}
+
+.fast {
+  animation-duration:1s; 
+}
+
+.slow {
+  animation-duration:4s; 
+}
+
+.medium {
+  animation-duration:2s; 
 }

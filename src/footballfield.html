@@ -1,0 +1,12 @@
+<template>
+	<section class="au-animate">
+		<div class = "field container">
+			<div class = "player au-animate ${p.IsSelected ? 'scaleSelect' : ''}" 
+				click.delegate="$parent.selectRoute(p)" 
+				repeat.for="p of positions" 
+				style="left:${p.Left}px; top:${p.Top}px">
+				${p.Name}
+			</div>
+		</div>
+	</section>
+</template>

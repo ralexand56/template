@@ -7,6 +7,12 @@
 				<i class="fa fa-hand-peace-o fa-3x" click.delegate="$parent.removeAnimator(p)"> </i> ${p}
 			</li>
 		</ul>
-		<div class="aniTest"></div>
+		<div class="aniTest ${selectedSpeed}"></div>
+		<div>
+			<select value.bind="selectedSpeed">
+				<option>Select Speed</option>
+				<option repeat.for="speed of speeds">${speed}</option>
+			</select>
+		</div>
 	</section>
 </template>

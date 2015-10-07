@@ -1,0 +1,39 @@
+.field{
+	background-color: green;
+	width: 500;
+	height: 500;
+}
+
+.player{
+	position: relative;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	background-color: white;
+}
+
+/* This is the animation code. */
+@-webkit-keyframes scaleSelect {
+   from { transform: scale(1.2); }
+   to   { transform: scale(1.0); }
+}
+
+@keyframes scaleSelect {
+   from { transform: scale(1.2); }
+   to   { transform: scale(1.0); }
+}
+
+/* This is the element that we apply the animation to. */
+.scaleSelect {
+   -webkit-animation-name: scaleSelect;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-timing-function: ease-in; /* ease is the default */
+   -webkit-animation-iteration-count: infinite;    /* 1 is the default */
+   -webkit-animation-direction: alternate;  /* normal is the default */
+   
+   animation-name: scaleSelect;
+   animation-duration: 1s;
+   animation-timing-function:  ease-in; /* ease is the default */
+   animation-iteration-count: infinite;    /* 1 is the default */
+   animation-direction: alternate;  /* normal is the default */
+}

@@ -43,7 +43,7 @@ define(["require", "exports", 'aurelia-framework', 'aurelia-http-client', 'fetch
             this.loadPosts();
         };
         httpsample = __decorate([
-            aurelia_framework_1.inject(aurelia_http_client_1.HttpClient), 
+            aurelia_framework_1.autoinject, 
             __metadata('design:paramtypes', [aurelia_http_client_1.HttpClient])
         ], httpsample);
         return httpsample;

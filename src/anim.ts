@@ -1,16 +1,13 @@
-import {autoinject} from 'aurelia-framework';
-import {CssAnimator} from 'aurelia-animator-css';
+// import {autoinject} from 'aurelia-framework';
+// import {CssAnimator} from 'aurelia-animator-css';
 
-@autoinject
+//@autoinject
 export class anim{
 	plays:Array<string>=["Trips 1", "Cross Buck", "Shotgun"];
-	
-	constructor(public animator:CssAnimator){
-		//console.log(this.animator);
-	}
+	duration:int32 = 1;
+	speeds:Array<string> = ["fast","slow","medium"];
 	
 	removeAnimator(p) {
-		console.log(p);
         var index = this.plays.indexOf(p);
         this.plays.splice(index, 1);
     }
